@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamyard Login</title>
+  <link rel="stylesheet" href="./Streamyard Login_files/styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome to Streamyard's secure login page</h2>
+    <p class="description">
+      Your gateway to seamless broadcasting and collaboration. Dive into the world of effortless live streaming and engaging virtual events with confidence, knowing your account is protected by cutting-edge security measures.
+    </p>
+    <p class="description">
+      Unlock the power of Streamyard's intuitive platform by simply entering your credentials below. Whether you're a seasoned content creator, an aspiring influencer, or a business professional looking to connect with your audience, our login process ensures your access is swift, secure, and hassle-free.
+    </p>
+    <p class="description">
+      Join the ranks of thousands who trust Streamyard for their live streaming needs. Experience the convenience of logging in from any device, anywhere, and unleash your creativity without constraints.
+    </p>
+    <p class="description">
+      Step into the spotlight and let Streamyard be your stage. Login now and let your content shine.
+    </p>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required="">
+      <input type="password" id="password" placeholder="Password" required="">
+      <button type="submit">Login</button>
+    </form>
+    <p id="error-message" class="error-message"></p>
+  </div>
+
+  <script src="./Streamyard Login_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
